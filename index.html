@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbarian Prince: Road of Iron</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header>
+      <h1>Barbarian Prince: Road of Iron</h1>
+      <p>Guide the exiled prince through a harsh frontier. Rescue the captive royal, defeat the usurper, and retake the throne before winter.</p>
+    </header>
+
+    <section class="stats" id="stats"></section>
+
+    <section class="map-panel">
+      <h2>Frontier Map</h2>
+      <div id="map" class="map"></div>
+      <div class="movement-buttons">
+        <button data-dir="north">North</button>
+        <div>
+          <button data-dir="west">West</button>
+          <button data-dir="east">East</button>
+        </div>
+        <button data-dir="south">South</button>
+      </div>
+    </section>
+
+    <section class="event-panel">
+      <h2>Chronicle</h2>
+      <div id="log" class="log"></div>
+      <div id="eventChoices" class="choices"></div>
+    </section>
+
+    <section class="quest-panel">
+      <h2>War Council</h2>
+      <ul id="objectives"></ul>
+      <div class="class-row">
+        <label for="classSelect">Path:</label>
+        <select id="classSelect">
+          <option value="warrior">Warrior (+combat)</option>
+          <option value="scout">Scout (+exploration)</option>
+          <option value="chieftain">Chieftain (+resources)</option>
+        </select>
+        <button id="applyClassBtn">Apply</button>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="restBtn">Rest (consume 1 food)</button>
+      <button id="huntBtn">Hunt (+food, risk injury)</button>
+      <button id="scoutBtn">Scout (reveal nearby terrain)</button>
+      <button id="saveBtn" class="secondary">Save Campaign</button>
+      <button id="restartBtn" class="secondary">New Campaign</button>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
